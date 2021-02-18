@@ -8,6 +8,10 @@ public class Main {
         System.out.println("Длина строки: " + line.length());
         String firstLine = line.substring(0, (line.length()/2));
         String secondLine = line.substring(line.length()/2);
+        StringBuffer sb = new StringBuffer();
+        sb.append(firstLine).append(secondLine);
+        System.out.println(sb);
+        System.out.println("---------------------------------------------------------------------------------------------------------");
         System.out.println(firstLine);
         System.out.println(secondLine);
     }
