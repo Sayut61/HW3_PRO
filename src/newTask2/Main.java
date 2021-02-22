@@ -3,14 +3,13 @@ package newTask2;
 public class Main {
     public static void main(String[] args) {
         String date = "18.02.2021";
-        System.out.println(date);
-        date = date.replace(".", "");
-        System.out.println(date);
-        int num = Integer.parseInt(date);
+        char chr;
         int sum = 0;
-        while (num > 0){
-            sum = sum + num % 10;
-            num = num / 10;
+        for (int i = 0; i < date.length(); i++) {
+            chr = date.charAt(i);
+            if(chr >= 48 && chr <= 57){
+                sum += Integer.parseInt(String.valueOf(chr));
+            }
         }
         System.out.println(sum);
     }
